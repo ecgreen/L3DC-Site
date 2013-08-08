@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>L3DC</title>
+	<link rel="stylesheet" type="text/css" href="css/l3dcstylesheet.css" media="screen" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<img src="/Users/ethangreen/Desktop/l3dc/images/placeholder.jpg" id="bg">
+
+<div class="header">
+	<img src="images/L3DCLogo.png" alt="Leap" class="img-rounded" height="69" width="244">
+</div>
+	
+<div class="spacer-top"> </div>
+
+<div class="links">
+<a onclick="displayContent(this.id)" href="#" class="link" id="pd">Parkinson's Disease</a> &nbsp &nbsp &nbsp
+<a onclick="displayContent(this.id)" href="#" class="link" id="product">Product</a> &nbsp &nbsp &nbsp &nbsp
+</div>
+
+<br>
+<span id="filler"> <div class="nocontent"></div> </span>
+<br>
+				
+<div class="links">
+<a onclick="displayContent(this.id)" href="#" class="link" id="about">About Us</a> &nbsp &nbsp &nbsp
+<a onclick="displayContent(this.id)" href="#" class="link" id="contact">Contact Us</a> &nbsp &nbsp &nbsp &nbsp
+</div>
+
+</body>
+</html>
+
+<script>
+function displayContent(clicked_id)
+{
+	if(clicked_id == "pd"){
+		document.getElementById("filler").innerHTML="<div class='content'> <div class='contentheader'><div class='linksclose'> <a onclick='close(this.id)' href='' class='closelink' id='x'>X</a> </div></div>";
+	} else if(clicked_id == "product") {
+		document.getElementById("filler").innerHTML="<div class='content'> <div class='links'> <a onclick='close(this.id)' href='' class='closelink' id='x'>X</a> </div></div>";
+	} else if(clicked_id == "about") {
+		document.getElementById("filler").innerHTML="<div class='content'> <div class='links'> <a onclick='close(this.id)' href='' class='closelink' id='x'>X</a> </div></div>";
+	} else if(clicked_id == "contact") {
+		document.getElementById("filler").innerHTML="<div class='content'> <div class='links'> <a onclick='close(this.id)' href='' class='closelink' id='x'>X</a> </div></div>";
+	}
+}
+
+function close(clicked_id)
+{
+	document.getElementById("filler").innerHTML="<div class='nocontent'></div>";
+}
+</script>
